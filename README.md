@@ -1,17 +1,17 @@
-#### Python Backend App Setup
+### Python Backend App Setup
 This suggested setup is designed for backend applications. It is mainly focused on 
 testing routes and using the test clients.
 It is recommended to use Python 3.10 and higher
 
 
-### Installation 
+#### Installation 
 Run the following command to install dependency into a virtual environment
 
 ```sh
 pip install .
 ```
 
-### TESTING
+#### TESTING
 the -v increases verbosity, you can see the pytest commands with pytest --help
 
 ```sh
@@ -20,20 +20,20 @@ pytest -v
 
 #### CLI
 
-### Invoke cli with arguments
+##### Invoke cli with arguments
 Invoking the cli with a required input
 
 ```sh
 python project/cli/arguments.py helo.txt
 ```
 
-### invoke cli with options
+##### invoke cli with options
 Invoking the cli passing in some input
 ```sh
 python project/cli/options.py --file helo.txt
 ```
 
-### invoke cli with groups
+##### invoke cli with groups
 Groups allow us to package multiple cli commands in a single file
 The first parameter is the command we want to invoke withint the group
 The second paramenter is the options name 
@@ -50,7 +50,7 @@ python project/cli/group.py run --run True
 
 #### LINTING AND TYPING
 
-### Run linter
+##### Run linter
 
 This command will run all pylint on all .py files in your project. 
 Note that pylint takes the configuration from .pylintrc but we can more the configuration to setup.cfg
@@ -65,7 +65,7 @@ you can alos check specific files
 pylint app.py
 ```
 
-### Run type checking
+##### Run type checking
 
 This command will run type chekcing on your .py files
 !! Mypy will not check unannotated python functions and variables. Make sure to annotate your code.
