@@ -102,3 +102,19 @@ def inference(request_dto: FooRequest) -> FooResponse:
     return FooResponse()
 
 ```
+
+### Environment Variables
+We can export local environment variables based on the setting/server.py ServerSettings
+
+```sh
+export SERVER_HOST="0.0.0.0"
+export SERVER_PORT=3000
+```
+
+to use the server settings we can just instantiate the ServerSettings class
+
+```python
+from project.settings import ServerSettings
+
+server_settings: ServerSettings = ServerSettings()
+```

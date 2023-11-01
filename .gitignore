@@ -1,3 +1,6 @@
 # Builds
 build
 
+# Pycache
+**/__pycache__/
+
