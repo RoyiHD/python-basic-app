@@ -75,3 +75,30 @@ https://peps.python.org/pep-0544/
 ```sh
 mypy .
 ```
+
+#### Request and Response Validators
+The project contains two decorators for request and response validation.
+
+We can use them in the following way
+
+```python
+
+# Import dtos
+from project.routes.v1.example.dto import FooRequest, FooResponse
+# Import decorators
+from project.decorators import request_dto, response_dto
+
+from flask import Flask
+
+app: Flask = Flask(__name__)
+
+# Wrap route with decorators
+@app.post("/api/v1/inference")
+@request_dto(FooRequest)
+@response_dto(FooResponse)
+def inference(request_dto: FooRequest) -> FooResponse:
+    # do stuff ...
+
+    return FooResponse()
+
+```
